@@ -22,8 +22,8 @@ public class ParseZillowGuide {
         File file = new File(caminho);
 
         try {
-            Document document = Jsoup.parse(file, "UTF-8", "");
 
+            Document document = Jsoup.parse(file, "UTF-8", "");
             Elements rows = document.select("tbody tr");
 
             float somaNotas = 0;
@@ -87,7 +87,8 @@ public class ParseZillowGuide {
             float mediaNotas = totalNotas > 0 ? somaNotas / totalNotas : 0;
 
             // Exibe os resultados
-            System.out.println("Professor com mais disciplinas: " + professorComMaisDisciplinas + ", Número de disciplinas: " + maxDisciplinas);
+            System.out.println("Professor com mais disciplinas: " + professorComMaisDisciplinas
+                    + ", Número de disciplinas: " + maxDisciplinas);
             System.out.println("Média de todas as notas: " + mediaNotas);
 
             // Exibe os resultados da lista ordenada

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Pessoa</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+  --></head>
+  <body>
+    <form action="pessoa_acao.php" method="POST">
+      <fieldset class="dadosPessoais">
+        <legend>Dados Pessoais</legend>
+        <div>
+          <label for="txt_nome">Nome:</label>
+          <input
+            type="text"
+            id="txt_nome"
+            name="nome"
+            placeholder="Nome Completo"
+            required
+          />
+        </div>
+        <div>
+          <label for="txt_idade">Idade:</label>
+          <input
+            type="text"
+            id="txt_idade"
+            name="idade"
+            placeholder="Idade"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="txt_naturalidade">Naturalidade:</label>
+          <input
+            type="text"
+            id="txt_naturalidade"
+            name="naturalidade"
+            placeholder="Naturalidade"
+            required
+          />
+        </div>
+        <div>
+          <label for="date_dataNascimento">Data de Nascimento:</label>
+          <input type="date" id="date_dn" name="dataNascimento" required />
+        </div>
+        <div>
+          <label for="txt_nomeSocial">Nome Social</label>
+          <input
+            type="text"
+            name="nomeSocial"
+            id="txt_nomeSocial"
+            placeholder="Nome Social (opcional)"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="radio_genero">Gênero:</label>
+          <br />
+          <input type="radio" id="radio_masc" name="genero" value="masculino" />
+          <label for="radio_masc">Masculino</label>
+          <input type="radio" id="radio_fem" name="genero" value="feminino" />
+          <label for="radio_fem">Feminino</label>
+          <input type="radio" id="radio_other" name="genero" value="feminino" />
+          <label for="radio_other">Outro</label>
+        </div>
+        <br />
+        <div>
+          <label for="select_escolaridade">Escolaridade:</label>
+          <br />
+          <select name="escolaridade" id="select_escolaridade">
+            <option value="fundamental">Ensino Fundamental</option>
+            <option value="medio">Ensino Médio</option>
+            <option value="superior">Ensino Superior</option>
+            <option value="posgraduacao">Pós-Graduação</option>
+            <option value="mestrado">Mestrado</option>
+            <option value="doutorado">Doutorado</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <label for="radio_temFilhos">Tem filhos? </label>
+          <br />
+          <input type="radio" value="sim" name="radio_temFilhos" />
+          <label for="radio_sim">Sim</label>
+          <input type="radio" value="não" name="radio_temFilhos" />
+          <label for="radio_nao">Não</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="endereco">
+        <legend>Endereço</legend>
+        <div>
+          <label for="txt_logradouro">Logradouro:</label>
+          <input
+            type="text"
+            id="txt_logradouro"
+            name="logradouro"
+            placeholder="Digite o logradouro"
+          />
+        </div>
+        <div>
+          <label for="txt_nro">Número:</label>
+          <input
+            type="text"
+            id="txt_nro"
+            name="numero"
+            placeholder="Digite o número"
+          />
+        </div>
+        <div>
+          <label for="txt_bairro">Bairro:</label>
+          <input
+            type="text"
+            id="txt_bairro"
+            name="bairro"
+            placeholder="Digite o bairro"
+          />
+        </div>
+        <div>
+          <label for="txt_cidade">Cidade:</label>
+          <input
+            type="text"
+            id="txt_cidade"
+            name="cidade"
+            placeholder="Digite a cidade"
+          />
+        </div>
+        <div>
+          <label for="txt_estado">Estado:</label>
+          <input
+            type="text"
+            id="txt_estado"
+            name="estado"
+            placeholder="Digite o estado"
+          />
+        </div>
+        <div>
+          <label for="txt_cep">CEP:</label>
+          <input
+            type="text"
+            name="cep"
+            id="txt_cep"
+            placeholder="Digite o CEP"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="enderecoComercial">
+        <legend>Endereço Comercial</legend>
+        <div>
+          <label for="txt_logradouro">Logradouro:</label>
+          <input
+            type="text"
+            id="txt_logradouro"
+            name="logradouro"
+            placeholder="Digite o logradouro"
+          />
+        </div>
+        <div>
+          <label for="txt_nro">Número:</label>
+          <input
+            type="text"
+            id="txt_nro"
+            name="numero"
+            placeholder="Digite o número"
+          />
+        </div>
+        <div>
+          <label for="txt_bairro">Bairro:</label>
+          <input
+            type="text"
+            id="txt_bairro"
+            name="bairro"
+            placeholder="Digite o bairro"
+          />
+        </div>
+        <div>
+          <label for="txt_cidade">Cidade:</label>
+          <input
+            type="text"
+            id="txt_cidade"
+            name="cidade"
+            placeholder="Digite a cidade"
+          />
+        </div>
+        <div>
+          <label for="txt_estado">Estado:</label>
+          <input
+            type="text"
+            id="txt_estado"
+            name="estado"
+            placeholder="Digite o estado"
+          />
+        </div>
+        <div>
+          <label for="txt_cep">CEP:</label>
+          <input
+            type="text"
+            name="cep"
+            id="txt_cep"
+            placeholder="Digite o CEP"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="Documentos">
+        <legend>Documentos</legend>
+        <div>
+          <label for="txt_cpf">CPF:</label>
+          <input
+            type="text"
+            id="txt_cpf"
+            name="cpf"
+            placeholder="000.000.000-00"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="txt_rg">RG:</label>
+          <input
+            type="text"
+            name="rg"
+            id="txt_rg"
+            placeholder="0.000.000"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="date_dataEmissao">Data de Emissão</label>
+          <input
+            type="date"
+            name="dataEmissao"
+            id="date_dataEmissao"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="informacaoComplementar">
+        <legend>Informação Complementar</legend>
+        <div>
+          <label for="txa_infocomplementar"></label>
+          <textarea
+            name="infocomplementar"
+            id="txa_infocomplementar"
+            cols="30"
+            rows="10"
+            placeholder="Digite informações adicionais (opcional)"
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <section class="buttons">
+        <input type="submit" value="Salvar" />
+        <input type="reset" value="Limpar" />
+      </section>
+    </form>
+  </body>
+</html>
